@@ -1,0 +1,80 @@
+# This code is printing the first 10 numbers of
+# the Fibonacci suite starting from 1,1.
+#
+# 4 memory cases will be used in total
+# 0,1,2 and 3 (written in hexadecimal like this : x00,x01,x02 and x03)
+
+
+
+
+
+
+
+
+# ---- VARIABLES ---- (memory boxes)
+#fibonnaci
+ASG  x00  x01 #first  fibonacci number
+ASG  x01  x01 #second fibonacci number
+              #(both initialized at 1 because we start the suite by 1,1)
+
+#calculation
+ASG  x02  x00 #result of the 2 fibonnaci numbers added
+              #(calculation not made yet so initialized at 0)
+
+#for loop variable (counter) that will go from 0 to 9 (x00 to x09);
+ASG  x03  x00
+
+
+
+
+
+
+
+
+# ---- INITIALIZATION ----
+#print the 2 first values of the suite
+PXL ax00    v
+PXL ax01    v
+
+
+
+
+
+
+
+
+# ---- FOR LOOP (10 times) ----
+#check condition
+EN_ ax03    v
+IF_    r d010 #this "IF_" statement is holding the next 10 code lines
+
+    # ---- FOR LOOP BODY ----
+    #calculation
+    ADD ax00 ax01 #fibonacci addition
+    PXL    r    v #print result
+    ASG  x02    r #store result
+
+    #these 2 commands will copy the value from the memory box x01 into the x00
+    ADD ax01    v
+    ASG  x00    r
+
+    #these 2 commands will copy the value from the memory box x02 into the x01
+    ADD ax02    v
+    ASG  x01    r
+
+    #increase the for loop counter
+    AD1 ax03    v
+    ASG  x03    r
+
+    JMP xf5  v #go back to the begining of the loop (-10 lines before so value is -11)
+               #value f5 in hexadecimal is 245 in natural binary and -11 in signed binary (8 bits)
+
+
+
+
+
+
+
+
+! This point is the end symbol.
+We are now outside of the code, this text will not be interpreted as code lines.

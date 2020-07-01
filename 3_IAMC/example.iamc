@@ -1,0 +1,328 @@
+/summon -21 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon -19 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 redstone_block"}}}}}}}
+
+/summon -17 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 redstone_block"}
+
+/summon -15 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 redstone_block"}
+
+/summon -13 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 air"}
+
+/summon -11 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon -9 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon -7 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 air"}
+
+/summon -5 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 redstone_block"}}}}}}}
+
+/summon -3 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 redstone_block"}}}}}}}
+
+/summon -1 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 redstone_block"}
+
+/summon 1 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 redstone_block"}
+
+/summon 3 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 air"}
+
+/summon 5 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 7 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 9 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 air"}
+
+/summon 11 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 13 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 15 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 redstone_block"}
+
+/summon 17 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 redstone_block"}
+
+/summon 19 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 air"}
+
+/summon 21 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 23 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 25 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 air"}
+
+/summon 27 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 redstone_block"}}}}}}}
+
+/summon 29 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 31 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 redstone_block"}
+
+/summon 33 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 redstone_block"}
+
+/summon 35 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 air"}
+
+/summon 37 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 39 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 41 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 air"}
+
+/summon 43 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 45 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 redstone_block"}
+
+/summon 47 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 redstone_block"}
+
+/summon 49 25 136 MinecartCommandBlock {Command:"/setblock -1 19 124 redstone_block"}
+
+/summon 51 25 136 MinecartCommandBlock {Command:"/setblock -1 19 124 air"}
+
+/summon 53 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 55 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 air"}
+
+/summon 57 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 air"}
+
+/summon 59 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 redstone_block"}}}}}}}
+
+/summon 61 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 redstone_block"}
+
+/summon 63 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 redstone_block"}
+
+/summon 65 25 136 MinecartCommandBlock {Command:"/setblock -1 19 124 redstone_block"}
+
+/summon 67 25 136 MinecartCommandBlock {Command:"/setblock -1 19 124 air"}
+
+/summon 69 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 71 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 air"}
+
+/summon 73 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 air"}
+
+/summon 75 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 redstone_block"}}}}}}}
+
+/summon 77 25 136 MinecartCommandBlock {Command:"/setblock -17 19 124 redstone_block"}
+
+/summon 79 25 136 MinecartCommandBlock {Command:"/setblock -17 19 124 air"}
+
+/summon 81 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 83 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 redstone_block"}}}}}}}
+
+/summon 85 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 redstone_block"}
+
+/summon 87 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 redstone_block"}
+
+/summon 89 25 136 MinecartCommandBlock {Command:"/setblock -13 19 124 redstone_block"}
+
+/summon 91 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 93 25 136 MinecartCommandBlock {Command:"/setblock -15 19 124 redstone_block"}
+
+/summon 95 25 136 MinecartCommandBlock {Command:"/setblock -15 19 124 air"}
+
+/summon 97 25 136 MinecartCommandBlock {Command:"/setblock -13 19 124 air"}
+
+/summon 99 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 101 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 air"}
+
+/summon 103 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 air"}
+
+/summon 105 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 redstone_block"}
+
+/summon 107 25 136 MinecartCommandBlock {Command:"/setblock -1 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 23 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 23 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 23 124 air"}}}}}}}
+
+/summon 109 25 136 MinecartCommandBlock {Command:"/setblock -17 21 124 redstone_block"}
+
+/summon 111 25 136 MinecartCommandBlock {Command:"/setblock -19 21 124 redstone_block"}
+
+/summon 113 25 136 MinecartCommandBlock {Command:"/setblock -19 21 124 air"}
+
+/summon 115 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 air"}
+
+/summon 117 25 136 MinecartCommandBlock {Command:"/setblock -1 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 23 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 23 124 air"}}}}}}}
+
+/summon 119 25 136 MinecartCommandBlock {Command:"/setblock -17 21 124 air"}
+
+/summon 121 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 redstone_block"}}}}}}}
+
+/summon 123 25 136 MinecartCommandBlock {Command:"/setblock -17 19 124 redstone_block"}
+
+/summon 125 25 136 MinecartCommandBlock {Command:"/setblock -17 19 124 air"}
+
+/summon 127 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 129 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 131 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 redstone_block"}
+
+/summon 133 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 redstone_block"}
+
+/summon 135 25 136 MinecartCommandBlock {Command:"/setblock -13 19 124 redstone_block"}
+
+/summon 137 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 redstone_block"}}}}}}}
+
+/summon 139 25 136 MinecartCommandBlock {Command:"/setblock -15 19 124 redstone_block"}
+
+/summon 141 25 136 MinecartCommandBlock {Command:"/setblock -15 19 124 air"}
+
+/summon 143 25 136 MinecartCommandBlock {Command:"/setblock -13 19 124 air"}
+
+/summon 145 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 147 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 air"}
+
+/summon 149 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 air"}
+
+/summon 151 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 redstone_block"}
+
+/summon 153 25 136 MinecartCommandBlock {Command:"/setblock -1 19 124 redstone_block"}
+
+/summon 155 25 136 MinecartCommandBlock {Command:"/setblock -1 19 124 air"}
+
+/summon 157 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 air"}
+
+/summon 159 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 161 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 redstone_block"}
+
+/summon 163 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 redstone_block"}
+
+/summon 165 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 redstone_block"}
+
+/summon 167 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 air"}
+
+/summon 169 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 171 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 air"}
+
+/summon 173 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 air"}
+
+/summon 175 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 redstone_block"}}}}}}}
+
+/summon 177 25 136 MinecartCommandBlock {Command:"/setblock -17 19 124 redstone_block"}
+
+/summon 179 25 136 MinecartCommandBlock {Command:"/setblock -17 19 124 air"}
+
+/summon 181 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 183 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 redstone_block"}}}}}}}
+
+/summon 185 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 redstone_block"}
+
+/summon 187 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 redstone_block"}
+
+/summon 189 25 136 MinecartCommandBlock {Command:"/setblock -13 19 124 redstone_block"}
+
+/summon 191 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 193 25 136 MinecartCommandBlock {Command:"/setblock -15 19 124 redstone_block"}
+
+/summon 195 25 136 MinecartCommandBlock {Command:"/setblock -15 19 124 air"}
+
+/summon 197 25 136 MinecartCommandBlock {Command:"/setblock -13 19 124 air"}
+
+/summon 199 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 201 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 air"}
+
+/summon 203 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 air"}
+
+/summon 205 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 207 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 redstone_block"}
+
+/summon 209 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 redstone_block"}
+
+/summon 211 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 redstone_block"}
+
+/summon 213 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 air"}
+
+/summon 215 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 217 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 air"}
+
+/summon 219 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 air"}
+
+/summon 221 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 redstone_block"}}}}}}}
+
+/summon 223 25 136 MinecartCommandBlock {Command:"/setblock -17 19 124 redstone_block"}
+
+/summon 225 25 136 MinecartCommandBlock {Command:"/setblock -17 19 124 air"}
+
+/summon 227 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 229 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 231 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 redstone_block"}
+
+/summon 233 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 redstone_block"}
+
+/summon 235 25 136 MinecartCommandBlock {Command:"/setblock -13 19 124 redstone_block"}
+
+/summon 237 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 239 25 136 MinecartCommandBlock {Command:"/setblock -15 19 124 redstone_block"}
+
+/summon 241 25 136 MinecartCommandBlock {Command:"/setblock -15 19 124 air"}
+
+/summon 243 25 136 MinecartCommandBlock {Command:"/setblock -13 19 124 air"}
+
+/summon 245 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 247 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 air"}
+
+/summon 249 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 air"}
+
+/summon 251 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 redstone_block"}}}}}}}
+
+/summon 253 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 redstone_block"}
+
+/summon 255 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 redstone_block"}
+
+/summon 257 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 redstone_block"}
+
+/summon 259 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 air"}
+
+/summon 261 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 263 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 air"}
+
+/summon 265 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 air"}
+
+/summon 267 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 269 25 136 MinecartCommandBlock {Command:"/setblock -17 19 124 redstone_block"}
+
+/summon 271 25 136 MinecartCommandBlock {Command:"/setblock -17 19 124 air"}
+
+/summon 273 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 redstone_block"}}}}}}}
+
+/summon 275 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 redstone_block"}
+
+/summon 277 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 redstone_block"}
+
+/summon 279 25 136 MinecartCommandBlock {Command:"/setblock -15 19 124 redstone_block"}
+
+/summon 281 25 136 MinecartCommandBlock {Command:"/setblock -15 19 124 air"}
+
+/summon 283 25 136 MinecartCommandBlock {Command:"/setblock -1 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 17 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 17 124 air"}}}}}}}
+
+/summon 285 25 136 MinecartCommandBlock {Command:"/setblock -11 19 124 air"}
+
+/summon 287 25 136 MinecartCommandBlock {Command:"/setblock -7 19 124 air"}
+
+/summon 289 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 291 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 redstone_block",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 redstone_block"}}}}}}}
+
+/summon 293 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 redstone_block"}
+
+/summon 295 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 redstone_block"}
+
+/summon 297 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 redstone_block"}
+
+/summon 299 25 136 MinecartCommandBlock {Command:"/setblock -9 19 124 air"}
+
+/summon 301 25 136 MinecartCommandBlock {Command:"/setblock -1 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -3 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -5 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -7 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -9 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -11 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -13 21 124 air",Riding:{id:MinecartCommandBlock,Command:"/setblock -15 21 124 air"}}}}}}}
+
+/summon 303 25 136 MinecartCommandBlock {Command:"/setblock -17 17 124 air"}
+
+/summon 305 25 136 MinecartCommandBlock {Command:"/setblock -5 19 124 air"}
+

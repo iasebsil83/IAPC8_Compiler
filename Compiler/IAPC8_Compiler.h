@@ -1,12 +1,23 @@
-// ---------------- Minecraft commands functions ----------------
-char* getBlockNameFromState(char state);
-char* getMinecraftCmd_Bit(int entityCoo[3], int operationCoo[3], char state);
-char* getMinecraftCmd_Byte(int entityCoo[3], int operationCoo[8][3], char* states);
+// ---------------- Precompiler functions ----------------
+void addFormatedLine(char* dest, char* source, int source_index);
 
 
 
 
 
 
-// -------------- Execution -------------
+
+
+// ---------------- Compiler functions ----------------
+void compileCommand(char* source, char* dest);
+
+
+
+
+
+
+
+
+// ---------------- Execution ----------------
 char* precompile(char* text);
+char* compile(char* code);
