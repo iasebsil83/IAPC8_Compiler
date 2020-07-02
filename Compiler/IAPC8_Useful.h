@@ -4,7 +4,9 @@ void freeStr(char* str, int len);
 int charInStr(char c, const char* str);
 int strcmpN(char* s1, char* s2, int len);
 void strcatExe(char* dest, char* pc_var, char* arg);
+void strcatUntilChar(char* dest, char* source, char endChar);
 void printOnN(char* str, int len);
+void printUntilChar(char* str, char endChar);
 
 
 

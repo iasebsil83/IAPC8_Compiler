@@ -36,7 +36,7 @@ void freeStr(char* str, int len){
 	free(str);
 }
 
-int charInStr(char c, const char* str){
+int charInStr(char c, const char* str){ //check if a character is inside a string
 	for(int a=0; a < strlen(str); a++)
 		if(c == str[a])
 			return 1;
@@ -58,7 +58,7 @@ int strcmpN(char* s1, char* s2, int len){ //compare the len first characters
 	return 1;
 }
 
-void strcatExe(char* dest, char* pc_var, char* arg){
+void strcatExe(char* dest, char* pc_var, char* arg){ //strcat() especially made for IAX commands
 	//error cases
 	if(dest == NULL){
 		printf("RUNTIME ERROR > IAPC8_Useful.c : strcatExe() : Destination string is NULL.");
@@ -75,11 +75,32 @@ void strcatExe(char* dest, char* pc_var, char* arg){
 	dest[dest_len++] = arg[0]; dest[dest_len++] = arg[1];
 	dest[dest_len++] = arg[2]; dest[dest_len++] = arg[3];
 	dest[dest_len++] = arg[4]; dest[dest_len++] = arg[5];
-	dest[dest_len++] = arg[6]; dest[dest_len++] = arg[7];
-	dest[dest_len  ] = '\n';
+	dest[dest_len++] = arg[6]; dest[dest_len  ] = arg[7];
 }
 
-void printOnN(char* str, int len){
+void strcatUntilChar(char* dest, char* source, char endChar){ //concatenate string source after destination
+	//error cases                                             //until end character found in source (endCharacter excluded)
+	if(dest == NULL || source == NULL){                       // + adding character '\\' before each character '"' 
+		printf("RUNTIME ERROR > IAPC8_Useful.c : strcatUntilChar() : Source or destination string is NULL.");
+		return;
+	}
+
+	//concatenate until endChar found in source
+	int dest_len = strlen(dest);
+	for(int si=0; si < strlen(source); si++){
+		//end character found
+		if(source[si] == endChar)
+			return;
+
+		//add escape character before each '"'
+		if(source[si] == '"')
+			dest[dest_len++] = '\\';
+
+		dest[dest_len++] = source[si];
+	}
+}
+
+void printOnN(char* str, int len){ //print the first len characters of a string
 	//error cases
 	if(strlen(str) < len)
 		printf("\nRUNTIME ERROR > IAPC8_Useful.c : printOnN() : String to print is too short\n");
@@ -87,6 +108,14 @@ void printOnN(char* str, int len){
 	//print
 	for(int i=0; i < len; i++)
 		printf("%c", str[i]);
+}
+
+void printUntilChar(char* str, char endChar){ //print a string until end character found
+	for(int i=0; i < strlen(str); i++){
+		if(str[i] == endChar)
+			return;
+		printf("%c", str[i]);
+	}
 }
 
 

@@ -10,9 +10,9 @@ char* getMinecraftCmd_Byte(int entityCoo[3], const int operatorCoo[8][3], char* 
 
 
 
-// ---------------- MC-Compilation functions ----------------
+// ---------------- MCTranslation functions ----------------
 int check8bits(char* str);
-void MCcompileLine(char*source, char* dest);
+void MCtranslateLine(char*source, char* dest, char sepChar);
 
 
 
@@ -22,4 +22,5 @@ void MCcompileLine(char*source, char* dest);
 
 
 // ---------------- Execution ----------------
-char* MCcompile(char* code);
+char* MCtranslate(char* code); //code will be set free (memory improvement)
+char* MCgather(char* code); //code will be set free (memory improvement)
