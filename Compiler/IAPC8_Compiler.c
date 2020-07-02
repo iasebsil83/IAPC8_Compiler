@@ -34,6 +34,7 @@ Version details :
         Full gathering function created in MCInterface.
         Improving and fixing a lot of stuff.
         Switching from single IAX command per line into several (depending on the IASM command)
+        Compiler is working in game.
 
 ======================================================================================== */
 
