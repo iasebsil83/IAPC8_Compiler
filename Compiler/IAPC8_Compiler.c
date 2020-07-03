@@ -1,4 +1,4 @@
-/* ================================ IAPC8 Compiler [0.1.2] ================================
+/* ================================ IAPC8 Compiler [0.1.4] ================================
 
 Version details :
 
@@ -35,6 +35,8 @@ Version details :
         Improving and fixing a lot of stuff.
         Switching from single IAX command per line into several (depending on the IASM command)
         Compiler is working in game.
+
+0.1.4 > Adding tolerance of capital characters (v/V, r/R, a/A, ...).
 
 ======================================================================================== */
 
@@ -113,16 +115,16 @@ void addFormatedLine(char* dest, char* source, int source_index){
 	//set prefix (p)
 	int setValue = 0;
 	switch(source[source_index]){
-		case 'r':
-		case 'p':
-			dest[dest_index++] = source[source_index++];
+		case 'R':	case 'r':
+		case 'P':	case 'p':
+			dest[dest_index++] = lowerCase(source[source_index++]);
 			dest[dest_index++] = '0'; dest[dest_index++] = '0';
 			dest[dest_index++] = '0'; dest[dest_index++] = '0';
 			dest[dest_index++] = '0'; dest[dest_index++] = '0';
 			dest[dest_index++] = '0'; dest[dest_index++] = '0';
 		break;
-		case 'a':
-			dest[dest_index++] = source[source_index++];
+		case 'A':	case 'a':
+			dest[dest_index++] = lowerCase(source[source_index++]);
 			setValue = 1;
 		break;
 		default:
@@ -134,19 +136,18 @@ void addFormatedLine(char* dest, char* source, int source_index){
 	if(setValue){
 		//convert value string to binary string
 		switch(source[source_index]){
-			case 'x':
+			case 'X':	case 'x':
 				strcat(dest, hex24bin(source[++source_index]) );
 				strcat(dest, hex24bin(source[++source_index]) );
 				source_index++;
 				dest_index += 8;
 			break;
-			case 'd':
+			case 'D':	case 'd':
 				strcat(dest, dec28bin(source+source_index+1) );
 				source_index += 4;
 				dest_index += 8;
 			break;
-			case '0': //already in binary format
-			case '1':
+			case '0':	case '1': //already in binary format
 				dest[dest_index++] = source[source_index++]; dest[dest_index++] = source[source_index++];
 				dest[dest_index++] = source[source_index++]; dest[dest_index++] = source[source_index++];
 				dest[dest_index++] = source[source_index++]; dest[dest_index++] = source[source_index++];
@@ -164,16 +165,16 @@ void addFormatedLine(char* dest, char* source, int source_index){
 	//set prefix (p)
 	setValue = 0;
 	switch(source[source_index]){
-		case 'r':
-		case 'p':
-			dest[dest_index++] = source[source_index++];
+		case 'R':	case 'r':
+		case 'P':	case 'p':
+			dest[dest_index++] = lowerCase(source[source_index++]);
 			dest[dest_index++] = '0'; dest[dest_index++] = '0';
 			dest[dest_index++] = '0'; dest[dest_index++] = '0';
 			dest[dest_index++] = '0'; dest[dest_index++] = '0';
 			dest[dest_index++] = '0'; dest[dest_index++] = '0';
 		break;
-		case 'a':
-			dest[dest_index++] = source[source_index++];
+		case 'A':	case 'a':
+			dest[dest_index++] = lowerCase(source[source_index++]);
 			setValue = 1;
 		break;
 		default:
@@ -185,17 +186,16 @@ void addFormatedLine(char* dest, char* source, int source_index){
 	if(setValue){
 		//convert value string to binary string
 		switch(source[source_index]){
-			case 'x':
+			case 'X':	case 'x':
 				strcat(dest, hex24bin(source[++source_index]) );
 				strcat(dest, hex24bin(source[++source_index]) );
 				//no need to increase source_index and dest_index, nothing comes after
 			break;
-			case 'd':
+			case 'D':	case 'd':
 				strcat(dest, dec28bin(source+source_index+1) );
 				//no need to increase source_index and dest_index, nothing comes after
 			break;
-			case '0': //already in binary format
-			case '1':
+			case '0':	case '1': //already in binary format
 				dest[dest_index++] = source[source_index++]; dest[dest_index++] = source[source_index++];
 				dest[dest_index++] = source[source_index++]; dest[dest_index++] = source[source_index++];
 				dest[dest_index++] = source[source_index++]; dest[dest_index++] = source[source_index++];
@@ -221,14 +221,14 @@ void addFormatedLine(char* dest, char* source, int source_index){
 void compileCommand(char* source, char* dest){
 
 	//all commands (VALUE 'p' NOT AVAILABLE YET)
-	if(source[3] == 'p'){
+	if(source[3] == 'p' || source[3] == 'P'){
 		printf("RUNTIME ERROR > IAPC8_Compiler.c : compileCommand() : ");
 		printf("Invalid first prefix 'p' for command \"");
 		printOnN(source, 21);
 		printf("\" (at line %i)\n", lineNbr);
 		return;
 	}
-	if(source[12] == 'p'){
+	if(source[12] == 'p' || source[12] == 'P'){
 		printf("RUNTIME ERROR > IAPC8_Compiler.c : compileCommand() : ");
 		printf("Invalid second prefix 'p' for command \"");
 		printOnN(source, 21);
@@ -1242,7 +1242,7 @@ char* precompile(char* text){
 
 			//code interpretation
 			if(charInStr(text[c],STR_TEXT)){
-				if(text[c] == 'v'){
+				if(text[c] == 'v' || text[c] == 'V'){
 					code_step1[code_step1_index++] = 'x';
 					code_step1[code_step1_index++] = '0';
 					code_step1[code_step1_index++] = '0';

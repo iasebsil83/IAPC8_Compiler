@@ -18,7 +18,7 @@
 #define MC_FINAL_CODE_LENGTH 100000
 #define LINES_PER_COMMAND 32
 //#define CLEARIFY //uncoment to clearify MC codes (making them unusable)
-#define DEBUG_ON //uncomment to enable debug messages
+//#define DEBUG_ON //uncomment to enable debug messages
 
 // ---- IAPC8 PC-Variables coordinates ---- (CUU_IN, CUU_PCO_OF and CUU_ALU_OF are disabled for the moment)
 //CUU

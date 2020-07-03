@@ -7,6 +7,7 @@ void strcatExe(char* dest, char* pc_var, char* arg);
 void strcatUntilChar(char* dest, char* source, char endChar);
 void printOnN(char* str, int len);
 void printUntilChar(char* str, char endChar);
+char lowerCase(char c);
 
 
 
