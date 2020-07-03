@@ -36,7 +36,7 @@ Version details :
         Switching from single IAX command per line into several (depending on the IASM command)
         Compiler is working in game.
 
-0.1.4 > Adding tolerance of capital characters (v/V, r/R, a/A, ...).
+0.1.4 > Adding tolerance of capital characters (r/R, a/A, ...) EXCEPT 'v' for void value (x00).
 
 ======================================================================================== */
 
@@ -60,7 +60,7 @@ Version details :
 
 // ----------------- Declarations ----------------
 // ---- Compiler variables ----
-//#define DEBUG_ON //uncomment to enable debug messages
+#define DEBUG_ON //uncomment to enable debug messages
 static int lineNbr = 0;
 
 // ---- Compiler constants ----
@@ -1242,7 +1242,7 @@ char* precompile(char* text){
 
 			//code interpretation
 			if(charInStr(text[c],STR_TEXT)){
-				if(text[c] == 'v' || text[c] == 'V'){
+				if(text[c] == 'v'){
 					code_step1[code_step1_index++] = 'x';
 					code_step1[code_step1_index++] = '0';
 					code_step1[code_step1_index++] = '0';
