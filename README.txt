@@ -281,74 +281,74 @@ IAPC8 is globally built in 3 big parts
         something else, then your executable code is CORRUPTED and will probably DON'T WORK.
         The following list shows you all the IAPC8 PC-Variables and their links :
 
-        +==============+
-        | PC-Variables |
-        +==============+====+====================+========+============================+==============================================+
-        |     Name     | ID |    Signification   |  Type  |       Connections          |                   Utility                    |
-        +==============+====+====================+========+============================+==============================================+
-        ! CUU_IN       ! 00 ! "CUU INPUT"        ! 8 bits !     DAT_OUT -> CUU_IN      ! Information comming from DAT_OUT and         !
-        !              !    !                    !        !     ALU_OUT                ! ALU_OUT to user.                             !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_OUT      ! 01 ! "CUU OUTPUT"       ! 8 bits !     CUU_OUT -> ALU_IN/OP   ! Information comming from user to ALU_IN,     !
-        !              !    !                    !        !                DAT_IN      ! ALU_OP and DAT_IN.                           !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_DAT_A    ! 02 ! "CUU DAT ADDRESS"  ! 8 bits !   CUU_DAT_A -> DAT_ADR     ! Address port used from user to data (DAT).   !
-        !              !    !                    !        !                            !                                              !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_DAT_S    ! 03 ! "DAT SET"          ! 1 bit  !   CUU_DAT_S -> DAT_SET     ! if ON, value in DAT_IN will be stored at     !
-        !              !    !                    !        !                            ! address DAT_ADR.                             !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_DAT_G    ! 04 ! "DAT GET"          ! 1 bit  !    CUU_DAT_G -> DAT_GET    ! if ON, DAT_OUT will now have the value       !
-        !              !    !                    !        !                            ! stored at address DAT_ADR.                   !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_DAT_IG   ! 05 ! "DAT IN GATE"      ! 1 bit  ! CUU_DAT_IG -> DAT_IN_GATE  ! if ON, CUU_OUT and ALU_OUT will now share    !
-        !              !    !                    !        !                            ! their value to DAT_IN.                       !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_DAT_OG   ! 06 ! "DAT OUT GATE"     ! 1 bit  ! CUU_DAT_OG -> DAT_OUT_GATE ! if ON, DAT_OUT will share its value with     !
-        !              !    !                    !        !                            ! ALU_IN and CUU_IN.                           !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_ALU_SS   ! 07 ! "ALU SECOND SET"   ! 1 bit  ! CUU_ALU_SS -> ALU_SS       ! if ON, second operator of ALU will be set to !
-        !              !    !                    !        !                            ! ALU_IN value. Else, this is for the first.   !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_ALU_OS   ! 08 ! "ALU OUT SET"      ! 1 bit  ! CUU_ALU_OS -> ALU_OS       ! if ON, result of ALU will be written in      !
-        !              !    !                    !        !                            ! ALU_OUT.                                     !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_ALU_PS   ! 09 ! "ALU OPERATOR SET" ! 1 bit  ! CUU_ALU_PS -> ALU_OPS      ! if ON, ALU_OP will be set to CUU_OUT.        !
-        !              !    !                    !        !                            !                                              !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_ALU_OG   ! 10 ! "ALU OUT GATE"     ! 1 bit  ! CUU_ALU_OG -> ALU_OUT_GATE ! if ON, ALU_OUT will share its value with     !
-        !              !    !                    !        !                            ! CUU_IN and DAT_IN.                           !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_ALU_OF   ! 11 !"ALU OVERFLOW"      ! 1 bit  ! CUU_ALU_OF <- ALU_OF       ! if ON, result of ALU detects an overflow.    !
-        !              !    !                    !        !                            !                                              !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_PCO_OF   ! 12 ! "PCO OVERFLOW"     ! 1 bit  ! CUU_PCO_OF <- PCO_OF       ! if ON, PCO detects an overflow.              !
-        !              !    !                    !        !                            !                                              !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_PCO_S    ! 13 ! "PCO SET"          ! 1 bit  !  CUU_PCO_S -> PCO_SET      ! if ON, result of PCO operation will be       !
-        !              !    !                    !        !                            ! written in Program Counter.                  !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_PCO_B    ! 14 ! "PCO BRIDGE"       ! 1 bit  !  CUU_PCO_B -> PCO_B        ! if ON, PCO_SET will be configurable to ON    !
-        !              !    !                    !        !                            ! only if CUU_IN is not 00000000.              !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_PCO_A    ! 15 ! "PCO ADD"          ! 1 bit  !  CUU_PCO_A -> PCO_ADD      ! if ON, the PCO switch in ADD operation       !
-        !              !    !                    !        !                            ! mode (if OFF, PCO operation is AD1).         !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_PCO_I    ! 16 ! "PCO INPUT"        ! 8 bits ! CUU_PCO_IN -> PCO_IN       ! Informations comming from user to Program    !
-        !              !    !                    !        !                            ! Counter.                                     !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_UOP_S    ! 17 ! "UOP SET"          ! 1 bit  !  CUU_UOP_S -> UOP_SET      ! if ON, UOP_IN will be set to CUU_IN.         !
-        !              !    !                    !        !                            !                                              !
-        +--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
-        ! CUU_UOP_I    ! 18 ! "UOP INPUT"        ! 8 bits !  CUU_UOP_I -> UOP_IN       ! Information comming from user to Display.    !
-        !              !    !                    !        !                            !                                              !
-        +==============+====+====================+========+============================+==============================================+
++==============+
+| PC-Variables |
++==============+====+====================+========+============================+==============================================+
+|     Name     | ID |    Signification   |  Type  |       Connections          |                   Utility                    |
++==============+====+====================+========+============================+==============================================+
+! CUU_IN       ! 00 ! "CUU INPUT"        ! 8 bits !     DAT_OUT -> CUU_IN      ! Information comming from DAT_OUT and         !
+!              !    !                    !        !     ALU_OUT                ! ALU_OUT to user.                             !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_OUT      ! 01 ! "CUU OUTPUT"       ! 8 bits !     CUU_OUT -> ALU_IN/OP   ! Information comming from user to ALU_IN,     !
+!              !    !                    !        !                DAT_IN      ! ALU_OP and DAT_IN.                           !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_DAT_A    ! 02 ! "CUU DAT ADDRESS"  ! 8 bits !   CUU_DAT_A -> DAT_ADR     ! Address port used from user to data (DAT).   !
+!              !    !                    !        !                            !                                              !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_DAT_S    ! 03 ! "DAT SET"          ! 1 bit  !   CUU_DAT_S -> DAT_SET     ! if ON, value in DAT_IN will be stored at     !
+!              !    !                    !        !                            ! address DAT_ADR.                             !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_DAT_G    ! 04 ! "DAT GET"          ! 1 bit  !    CUU_DAT_G -> DAT_GET    ! if ON, DAT_OUT will now have the value       !
+!              !    !                    !        !                            ! stored at address DAT_ADR.                   !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_DAT_IG   ! 05 ! "DAT IN GATE"      ! 1 bit  ! CUU_DAT_IG -> DAT_IN_GATE  ! if ON, CUU_OUT and ALU_OUT will now share    !
+!              !    !                    !        !                            ! their value to DAT_IN.                       !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_DAT_OG   ! 06 ! "DAT OUT GATE"     ! 1 bit  ! CUU_DAT_OG -> DAT_OUT_GATE ! if ON, DAT_OUT will share its value with     !
+!              !    !                    !        !                            ! ALU_IN and CUU_IN.                           !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_ALU_SS   ! 07 ! "ALU SECOND SET"   ! 1 bit  ! CUU_ALU_SS -> ALU_SS       ! if ON, second operator of ALU will be set to !
+!              !    !                    !        !                            ! ALU_IN value. Else, this is for the first.   !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_ALU_OS   ! 08 ! "ALU OUT SET"      ! 1 bit  ! CUU_ALU_OS -> ALU_OS       ! if ON, result of ALU will be written in      !
+!              !    !                    !        !                            ! ALU_OUT.                                     !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_ALU_PS   ! 09 ! "ALU OPERATOR SET" ! 1 bit  ! CUU_ALU_PS -> ALU_OPS      ! if ON, ALU_OP will be set to CUU_OUT.        !
+!              !    !                    !        !                            !                                              !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_ALU_OG   ! 10 ! "ALU OUT GATE"     ! 1 bit  ! CUU_ALU_OG -> ALU_OUT_GATE ! if ON, ALU_OUT will share its value with     !
+!              !    !                    !        !                            ! CUU_IN and DAT_IN.                           !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_ALU_OF   ! 11 !"ALU OVERFLOW"      ! 1 bit  ! CUU_ALU_OF <- ALU_OF       ! if ON, result of ALU detects an overflow.    !
+!              !    !                    !        !                            !                                              !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_PCO_OF   ! 12 ! "PCO OVERFLOW"     ! 1 bit  ! CUU_PCO_OF <- PCO_OF       ! if ON, PCO detects an overflow.              !
+!              !    !                    !        !                            !                                              !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_PCO_S    ! 13 ! "PCO SET"          ! 1 bit  !  CUU_PCO_S -> PCO_SET      ! if ON, result of PCO operation will be       !
+!              !    !                    !        !                            ! written in Program Counter.                  !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_PCO_B    ! 14 ! "PCO BRIDGE"       ! 1 bit  !  CUU_PCO_B -> PCO_B        ! if ON, PCO_SET will be configurable to ON    !
+!              !    !                    !        !                            ! only if CUU_IN is not 00000000.              !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_PCO_A    ! 15 ! "PCO ADD"          ! 1 bit  !  CUU_PCO_A -> PCO_ADD      ! if ON, the PCO switch in ADD operation       !
+!              !    !                    !        !                            ! mode (if OFF, PCO operation is AD1).         !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_PCO_I    ! 16 ! "PCO INPUT"        ! 8 bits ! CUU_PCO_IN -> PCO_IN       ! Informations comming from user to Program    !
+!              !    !                    !        !                            ! Counter.                                     !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_UOP_S    ! 17 ! "UOP SET"          ! 1 bit  !  CUU_UOP_S -> UOP_SET      ! if ON, UOP_IN will be set to CUU_IN.         !
+!              !    !                    !        !                            !                                              !
++--------------+----+--------------------+--------+----------------------------+----------------------------------------------+
+! CUU_UOP_I    ! 18 ! "UOP INPUT"        ! 8 bits !  CUU_UOP_I -> UOP_IN       ! Information comming from user to Display.    !
+!              !    !                    !        !                            !                                              !
++==============+====+====================+========+============================+==============================================+
 
         You may notice that all these variables starts with "CUU", this is because
         these variables are accessed by the CUU interface.
 
-        /!\ BE CAREFUL /!\ : When using these PC-Variables, mind that you might have to reset them all after each operation if you don't
-        want to have bad sursprises !
+        /!\ BE CAREFUL /!\ : When using these PC-Variables, mind that you might have to reset them all
+        after each operation if you don't want to have bad sursprises !
         The only PC-Variable that don't need to be reset is CUU_PCO_S (it is automatically reset by IAPC8).
 
 
@@ -356,7 +356,8 @@ IAPC8 is globally built in 3 big parts
 4) Code explanation
 
     Each PC-Variable is refered by an ID number written on 2 digits (in decimal).
-    Each line of an IA executable file is a value affectation on 8 bits EVEN IF the current PC-Variable is only written on 1 bit.
+    Each line of an IA executable file is a value affectation on 8 bits EVEN IF the current PC-Variable is
+    only written on 1 bit.
 
     Here is the code line structure : XXYYYYYYYY
 
@@ -373,7 +374,7 @@ IAPC8 is globally built in 3 big parts
     | 0900000000 | CUU_ALU_PS = 0        | Set done.                                    |
     | 0100000010 | CUU_OUT    = 00000010 | Push value 2 in ALU_IN/ALU_OP/DAT_IN.        |
     | 0700000001 | CUU_ALU_SS = 1        | Set second ALU operand to ALU_IN.            |
-    | 0111111111 | CUU_OUT    = 11111111 | Push value -1 in ALU_IN/ALU_OP/DAT_IN.              | (calculation is made instantly)
+    | 0111111111 | CUU_OUT    = 11111111 | Push value -1 in ALU_IN/ALU_OP/DAT_IN.       | (calculation is made instantly)
     | 0800000001 | CUU_ALU_OS = 1        | Push result of the ALU into ALU_OUT.         |
     | 0800000000 | CUU_ALU_OS = 0        | Set done (for ALU_OUT).                      |
     | 1000000001 | CUU_ALU_OG = 1        | Push ALU_OUT into CUU_IN.                    |
