@@ -7,10 +7,6 @@
 
 
 
-
-
-
-
 # ---- VARIABLES ---- (memory boxes)
 #fibonnaci
 ASG  x00  x01 #first  fibonacci number
@@ -27,18 +23,10 @@ ASG  x03  x00
 
 
 
-
-
-
-
 # ---- INITIALIZATION ----
 #print the 2 first values of the suite
 PXL ax00    v
 PXL ax01    v
-
-
-
-
 
 
 
@@ -68,10 +56,6 @@ IF_    r d010 #this "IF_" statement is holding the next 10 code lines
 
     JMP xf5  v #go back to the begining of the loop (-10 lines before so value is -11)
                #value f5 in hexadecimal is 245 in natural binary and -11 in signed binary (8 bits)
-
-
-
-
 
 
 

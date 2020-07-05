@@ -37,6 +37,7 @@ Version details :
         Compiler is working in game.
 
 0.1.4 > Adding tolerance of capital characters (r/R, a/A, ...) EXCEPT 'v' for void value (x00).
+        Fixed little bugs.
 
 ======================================================================================== */
 
@@ -60,7 +61,7 @@ Version details :
 
 // ----------------- Declarations ----------------
 // ---- Compiler variables ----
-#define DEBUG_ON //uncomment to enable debug messages
+//#define DEBUG_ON //uncomment to enable debug messages
 static int lineNbr = 0;
 
 // ---- Compiler constants ----

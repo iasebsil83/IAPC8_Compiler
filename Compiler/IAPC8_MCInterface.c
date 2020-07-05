@@ -450,9 +450,9 @@ char* MCgather(char* code){ //code will be set free (memory improvement)
 			localLineNbr++;
 			if(localLineNbr >= LINES_PER_COMMAND){ //CONSTANT
 				localLineNbr = 1;
-				strcat(mc_final_code, "\"");
 
-				//add all end brackets
+				//add final double quotes + all end brackets
+				strcat(mc_final_code, "\"");
 				for(int b=0; b < endBracketNbr; b++)
 					strcat(mc_final_code,"}");
 				endBracketNbr = 0;
@@ -504,7 +504,8 @@ char* MCgather(char* code){ //code will be set free (memory improvement)
 	//free code
 	freeStr(code, strlen(code));
 
-	//add all end brackets
+	//add final double quote + all end brackets
+	strcat(mc_final_code, "\"");
 	for(int b=0; b < endBracketNbr; b++)
 		strcat(mc_final_code,"}");
 

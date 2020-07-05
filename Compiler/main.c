@@ -26,7 +26,6 @@ int main(){
 	char* source_fileName = mallocStr(FILENAME_LENGTH);
 	char* dest1_fileName  = mallocStr(FILENAME_LENGTH);
 	char* dest2_fileName  = mallocStr(FILENAME_LENGTH);
-	char* dest3_fileName  = mallocStr(FILENAME_LENGTH);
 
 
 
@@ -56,23 +55,16 @@ int main(){
 
 
 
-	//MC interfacing
+	//MC interfacing + gathering
 	MCcompCode = MCtranslate(compCode);
-	sprintf(dest2_fileName, "3_IAMC/%s.iamc", input);
-	writeToFile(dest2_fileName, MCcompCode);
-
-
-
-	//MC gathering
 	MCgatheredCode = MCgather(MCcompCode);
-	sprintf(dest3_fileName, "3_IAMC/%s_gathered.iamc", input);
-	writeToFile(dest3_fileName, MCgatheredCode);
+	sprintf(dest2_fileName, "3_IAMC/%s.iamc", input);
+	writeToFile(dest2_fileName, MCgatheredCode);
 
 	//free main allocated strings
 	freeStr(source_fileName, FILENAME_LENGTH);
 	freeStr(dest1_fileName, FILENAME_LENGTH);
 	freeStr(dest2_fileName, FILENAME_LENGTH);
-	freeStr(dest3_fileName, FILENAME_LENGTH);
 
 	return EXIT_SUCCESS;
 }
