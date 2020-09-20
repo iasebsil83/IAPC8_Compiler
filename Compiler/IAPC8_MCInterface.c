@@ -54,7 +54,7 @@ const int CUU_PCO_I[8][3] = {
 	{-15,23,124}
 };
 //const int CUU_PCO_OF[3] = {-19,19,124};
-const int CUU_PCO_S[3]  = {-19,21,124};
+const int CUU_PCO_S[3]  = {-22,24,169}; //coordinates of CUU_PCO_S agent (real CUU_PCO_S coordinates are {-19,21,124})
 const int CUU_PCO_B[3]  = {-17,21,124};
 const int CUU_PCO_A[3]  = {-19,17,124};
 //UOP

@@ -27,9 +27,9 @@ III] IA executable codes (.iax)
 
     1) Introduction
 
-    Thank you for downloading IAPC8_Compiler[0.1.0],
+    Thank you for downloading IAPC8_Compiler[0.1.5],
 
-    This program is a compiler for IAPC8[0.1.0] scripts.
+    This program is a compiler for IAPC8[0.1.5] scripts.
     IAPC8 is an 8 bit computer made in Minecraft using basic redstone components
     such as redstone dust, repeaters (wires) and torches (inverters).
 
@@ -185,7 +185,7 @@ III] IA executable codes (.iax)
             MUL arg1 arg2 : set value of r at arg1 * arg2
             DIV arg1 arg2 : set value of r at arg1 / arg2 (not available yet)
         CMP
-            INFORMATION > if the comparation is true, r is set to 1, else to 0
+            INFORMATION > if the comparation is true, r is set to 255, else to 0
             EZ_ arg1      : comparation true if arg1 equals 0
             EN_ arg1 arg2 : comparation true if arg1 equals arg2
             GZ_ arg1      : comparation true if arg1 is greater than 0 (strict)
@@ -369,8 +369,8 @@ IAPC8 is globally built in 3 big parts
     +------------+-----------------------+----------------------------------------------+
     | Executable |     Signification     |                 Explanation                  |
     +------------+-----------------------+----------------------------------------------+
-    | 0100001000 | CUU_OUT    = 00001000 | Push value 8 in ALU_IN/ALU_OP/DAT_IN.        |
-    | 0900000001 | CUU_ALU_PS = 1        | Set ALU operator to CUU_OUT.                 | (operation number 8 is ADD)
+    | 0110010000 | CUU_OUT    = 10010000 | Push value 144 in ALU_IN/ALU_OP/DAT_IN.      |
+    | 0900000001 | CUU_ALU_PS = 1        | Set ALU operator to CUU_OUT.                 | (operation number 144 is ADD)
     | 0900000000 | CUU_ALU_PS = 0        | Set done.                                    |
     | 0100000010 | CUU_OUT    = 00000010 | Push value 2 in ALU_IN/ALU_OP/DAT_IN.        |
     | 0700000001 | CUU_ALU_SS = 1        | Set second ALU operand to ALU_IN.            |
@@ -383,8 +383,7 @@ IAPC8 is globally built in 3 big parts
     | 1000000000 | CUU_ALU_OG = 0        | Close ALU_OUT gate.                          |
     +------------+-----------------------+----------------------------------------------+
 
-    This example will make the calculation 2+-1 => 1 and push it into the screen so it will
-    toggle the pixel at coordinates (0,0).
+    This example will make the calculation 2+-1 => 1 and push it into the screen.
     (value 00000001 into UOP_IN)
 
     +-------------+
@@ -393,20 +392,21 @@ IAPC8 is globally built in 3 big parts
     |    Value    | Type | Operation |
     +-------------+------+-----------+
     |  0000 0000  |  CMP |    EZ_    |
-    |  0000 0001  |  CMP |    EN_    |
-    |  0000 0010  |  CMP |    GZ_    |
-    |  0000 0011  |  CMP |    LZ_    |
-    |  0000 0100  |  CMP |     -     | (operations not defined)
-    |  0000 0101  |  CMP |     -     |
-    |  0000 0110  |  CMP |     -     |
-    |  0000 0111  |  CMP |     -     |
-    |  0000 1001  |  8OP |    ADD    |
-    |  0000 1010  |  8OP |    AD1    |
-    |  0000 1011  |  8OP |    MUL    |
-    |  0000 1100  |  8OP |    INV    |
-    |  0000 1101  |  8OP |    AND    |
-    |  0000 1110  |  8OP |    LSH    |
-    |  0000 1111  |  8OP |    RSH    |
+    |  1000 0000  |  CMP |    EN_    |
+    |  0100 0000  |  CMP |    GZ_    |
+    |  1100 0000  |  CMP |    LZ_    |
+    |  0010 0000  |  CMP |     -     | (operations not defined)
+    |  1010 0000  |  CMP |     -     |
+    |  0110 0000  |  CMP |     -     |
+    |  1110 0000  |  CMP |     -     |
+    |  0001 0000  |  8OP |    ADD    |
+    |  1001 0000  |  8OP |    AD1    |
+    |  0101 0000  |  8OP |    MUL    |
+    |  1101 0000  |  8OP |    INV    |
+    |  0011 0000  |  8OP |    AND    |
+    |  1011 0000  |  8OP |    LSH    |
+    |  0111 0000  |  8OP |    RSH    |
+    |  1111 0000  |  8OP |    DIV    |
     +-------------+------+-----------+
 
 

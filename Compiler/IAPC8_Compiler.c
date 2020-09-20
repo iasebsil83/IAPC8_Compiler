@@ -1,4 +1,4 @@
-/* ================================ IAPC8 Compiler [0.1.4] ================================
+/* ================================ IAPC8 Compiler [0.1.5] ================================
 
 Version details :
 
@@ -38,6 +38,13 @@ Version details :
 
 0.1.4 > Adding tolerance of capital characters (r/R, a/A, ...) EXCEPT 'v' for void value (x00).
         Fixed little bugs.
+
+0.1.5 > Fixed bugs on compilation of all ALU operations.
+        Passing from CUU_PCO_S to its agent. (direct use of CUU_PCO_S is too slow for IAPC8)
+        Fixed a bug in the PCO.
+
+
+BUGS : - First and last character of IASM code are not interpreted except for '#'.
 
 ======================================================================================== */
 
@@ -307,7 +314,7 @@ void compileCommand(char* source, char* dest){
 	}else if(strcmpN(source, "INV", 3)){
 		switch(source[3]){ //first prefix
 			case 'v':
-				strcatExe(dest, CUU_OUT,    "00001100"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "11010000"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -317,17 +324,17 @@ void compileCommand(char* source, char* dest){
 				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, "\n"); //reset
 			break;
 			case 'a':
-				strcatExe(dest, CUU_OUT,    "00001100"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "11010000"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_A,   source+4 ); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_G,  "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_OG, "00000001"); strcat(dest, " ");
 				//...calculating...
 				strcatExe(dest, CUU_ALU_OS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_OS, "00000000"); strcat(dest, " ");
-				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " "); //reset
-				strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " ");
+				strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " "); //reset
 				strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_A,  "00000000"); strcat(dest, "\n");
 			break;
@@ -354,7 +361,7 @@ void compileCommand(char* source, char* dest){
 			case 'v':
 				switch(source[12]){ //second prefix
 					case 'v':
-						strcatExe(dest, CUU_OUT,    "00001101"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "00110000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -367,7 +374,7 @@ void compileCommand(char* source, char* dest){
 						strcatExe(dest, CUU_ALU_SS, "00000000"); strcat(dest, "\n");
 					break;
 					case 'a':
-						strcatExe(dest, CUU_OUT,    "00001101"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "00110000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -402,7 +409,7 @@ void compileCommand(char* source, char* dest){
 			case 'a':
 				switch(source[12]){ //second prefix
 					case 'v':
-						strcatExe(dest, CUU_OUT,    "00001101"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "00110000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
@@ -410,17 +417,18 @@ void compileCommand(char* source, char* dest){
 						strcatExe(dest, CUU_DAT_G,  "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_DAT_OG, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_SS, "00000001"); strcat(dest, " ");
+						strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+13); strcat(dest, " ");
 						//...calculating...
 						strcatExe(dest, CUU_ALU_OS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_OS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_SS, "00000000"); strcat(dest, " "); //reset
+						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_DAT_A,  "00000000"); strcat(dest, " ");
-						strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " ");
-						strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, "\n");
+						strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, "\n");
 					break;
 					case 'a':
-						strcatExe(dest, CUU_OUT,    "00001101"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "00110000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
@@ -489,7 +497,7 @@ void compileCommand(char* source, char* dest){
 	}else if(strcmpN(source,"AD1",3)){
 		switch(source[3]){ //first prefix
 			case 'v':
-				strcatExe(dest, CUU_OUT,    "00001010"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "10010000"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -499,17 +507,17 @@ void compileCommand(char* source, char* dest){
 				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, "\n"); //reset
 			break;
 			case 'a':
-				strcatExe(dest, CUU_OUT,    "00001010"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "10010000"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_A,   source+4 ); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_G,  "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_OG, "00000001"); strcat(dest, " ");
 				//...calculating...
 				strcatExe(dest, CUU_ALU_OS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_OS, "00000000"); strcat(dest, " ");
-				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " "); //reset
-				strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " ");
+				strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " "); //reset
 				strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_A,  "00000000"); strcat(dest, "\n");
 			break;
@@ -536,7 +544,7 @@ void compileCommand(char* source, char* dest){
 			case 'v':
 				switch(source[12]){ //second prefix
 					case 'v':
-						strcatExe(dest, CUU_OUT,    "00001001"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "00010000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -549,7 +557,7 @@ void compileCommand(char* source, char* dest){
 						strcatExe(dest, CUU_ALU_SS, "00000000"); strcat(dest, "\n");
 					break;
 					case 'a':
-						strcatExe(dest, CUU_OUT,    "00001001"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "00010000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -584,7 +592,7 @@ void compileCommand(char* source, char* dest){
 			case 'a':
 				switch(source[12]){ //second prefix
 					case 'v':
-						strcatExe(dest, CUU_OUT,    "00001001"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "00010000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
@@ -592,17 +600,18 @@ void compileCommand(char* source, char* dest){
 						strcatExe(dest, CUU_DAT_G,  "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_DAT_OG, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_SS, "00000001"); strcat(dest, " ");
+						strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+13); strcat(dest, " ");
 						//...calculating...
 						strcatExe(dest, CUU_ALU_OS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_OS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_SS, "00000000"); strcat(dest, " "); //reset
+						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_DAT_A,  "00000000"); strcat(dest, " ");
-						strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " ");
-						strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, "\n");
+						strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, "\n");
 					break;
 					case 'a':
-						strcatExe(dest, CUU_OUT,    "00001001"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "00010000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
@@ -657,7 +666,7 @@ void compileCommand(char* source, char* dest){
 			case 'v':
 				switch(source[12]){ //second prefix
 					case 'v':
-						strcatExe(dest, CUU_OUT,    "00001011"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "01010000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -670,7 +679,7 @@ void compileCommand(char* source, char* dest){
 						strcatExe(dest, CUU_ALU_SS, "00000000"); strcat(dest, "\n");
 					break;
 					case 'a':
-						strcatExe(dest, CUU_OUT,    "00001011"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "01010000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -705,7 +714,7 @@ void compileCommand(char* source, char* dest){
 			case 'a':
 				switch(source[12]){ //second prefix
 					case 'v':
-						strcatExe(dest, CUU_OUT,    "00001011"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "01010000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
@@ -713,17 +722,18 @@ void compileCommand(char* source, char* dest){
 						strcatExe(dest, CUU_DAT_G,  "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_DAT_OG, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_SS, "00000001"); strcat(dest, " ");
+						strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+13); strcat(dest, " ");
 						//...calculating...
 						strcatExe(dest, CUU_ALU_OS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_OS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_SS, "00000000"); strcat(dest, " "); //reset
+						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_DAT_A,  "00000000"); strcat(dest, " ");
-						strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " ");
-						strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, "\n");
+						strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, "\n");
 					break;
 					case 'a':
-						strcatExe(dest, CUU_OUT,    "00001011"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "01010000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
@@ -797,14 +807,14 @@ void compileCommand(char* source, char* dest){
 				//default state of CUU_OUT is 00000000
 				strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
+				//default state of CUU_OUT is 00000000
 				strcatExe(dest, CUU_DAT_A,   source+4 ); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_G,  "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_OG, "00000001"); strcat(dest, " ");
 				//...calculating...
 				strcatExe(dest, CUU_ALU_OS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_OS, "00000000"); strcat(dest, " ");
-				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " "); //reset
-				strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " ");
+				strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " "); //reset
 				strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_A,  "00000000"); strcat(dest, "\n");
 			break;
@@ -831,7 +841,7 @@ void compileCommand(char* source, char* dest){
 			case 'v':
 				switch(source[12]){ //second prefix
 					case 'v':
-						strcatExe(dest, CUU_OUT,    "00000001"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "10000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -844,7 +854,7 @@ void compileCommand(char* source, char* dest){
 						strcatExe(dest, CUU_ALU_SS, "00000000"); strcat(dest, "\n");
 					break;
 					case 'a':
-						strcatExe(dest, CUU_OUT,    "00000001"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "10000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -879,7 +889,7 @@ void compileCommand(char* source, char* dest){
 			case 'a':
 				switch(source[12]){ //second prefix
 					case 'v':
-						strcatExe(dest, CUU_OUT,    "00000001"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "10000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
@@ -887,17 +897,18 @@ void compileCommand(char* source, char* dest){
 						strcatExe(dest, CUU_DAT_G,  "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_DAT_OG, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_SS, "00000001"); strcat(dest, " ");
+						strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,     source+13); strcat(dest, " ");
 						//...calculating...
 						strcatExe(dest, CUU_ALU_OS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_OS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_SS, "00000000"); strcat(dest, " "); //reset
+						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_DAT_A,  "00000000"); strcat(dest, " ");
-						strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " ");
-						strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, "\n");
+						strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, "\n");
 					break;
 					case 'a':
-						strcatExe(dest, CUU_OUT,    "00000001"); strcat(dest, " ");
+						strcatExe(dest, CUU_OUT,    "10000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
@@ -950,7 +961,7 @@ void compileCommand(char* source, char* dest){
 	}else if(strcmpN(source,"GZ_",3)){
 		switch(source[3]){ //first prefix
 			case 'v':
-				strcatExe(dest, CUU_OUT,    "00000010"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "01000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -960,17 +971,17 @@ void compileCommand(char* source, char* dest){
 				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, "\n"); //reset
 			break;
 			case 'a':
-				strcatExe(dest, CUU_OUT,    "00000010"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "01000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_A,   source+4 ); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_G,  "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_OG, "00000001"); strcat(dest, " ");
 				//...calculating...
 				strcatExe(dest, CUU_ALU_OS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_OS, "00000000"); strcat(dest, " ");
-				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " "); //reset
-				strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " ");
+				strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " "); //reset
 				strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_A,  "00000000"); strcat(dest, "\n");
 			break;
@@ -995,7 +1006,7 @@ void compileCommand(char* source, char* dest){
 	}else if(strcmpN(source,"LZ_",3)){
 		switch(source[3]){ //first prefix
 			case 'v':
-				strcatExe(dest, CUU_OUT,    "00000011"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "11000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_OUT,     source+4 ); strcat(dest, " ");
@@ -1005,17 +1016,17 @@ void compileCommand(char* source, char* dest){
 				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, "\n"); //reset
 			break;
 			case 'a':
-				strcatExe(dest, CUU_OUT,    "00000011"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "11000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_PS, "00000000"); strcat(dest, " ");
+				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_A,   source+4 ); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_G,  "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_OG, "00000001"); strcat(dest, " ");
 				//...calculating...
 				strcatExe(dest, CUU_ALU_OS, "00000001"); strcat(dest, " ");
 				strcatExe(dest, CUU_ALU_OS, "00000000"); strcat(dest, " ");
-				strcatExe(dest, CUU_OUT,    "00000000"); strcat(dest, " "); //reset
-				strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " ");
+				strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " "); //reset
 				strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, " ");
 				strcatExe(dest, CUU_DAT_A,  "00000000"); strcat(dest, "\n");
 			break;
@@ -1047,15 +1058,18 @@ void compileCommand(char* source, char* dest){
 						strcatExe(dest, CUU_DAT_G,  "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_DAT_OG, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_PCO_I,   source+13); strcat(dest, " ");
+						strcatExe(dest, CUU_PCO_A,  "00000001"); strcat(dest, " ");
+						strcatExe(dest, CUU_PCO_A,  "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_PCO_B,  "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_PCO_S,  "00000001"); strcat(dest, " ");
 						//normally, no need to put it back to 00000000 (auto reset)
 						//but in this case, if condition is true, there will be no set
 						//so we have to reset it manually
-						strcatExe(dest, CUU_PCO_S,  "00000000"); strcat(dest, " ");
+						strcatExe(dest, CUU_PCO_S,  "00000000"); strcat(dest, " "); //CUU_PCO_S agent needs to be reset
 						strcatExe(dest, CUU_DAT_A,  "00000000"); strcat(dest, " "); //reset
 						strcatExe(dest, CUU_DAT_G,  "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_DAT_OG, "00000000"); strcat(dest, " ");
+						strcatExe(dest, CUU_PCO_A,  "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_PCO_I,  "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_PCO_B,  "00000000"); strcat(dest, "\n");
 					break;
@@ -1080,13 +1094,15 @@ void compileCommand(char* source, char* dest){
 					case 'v':
 						strcatExe(dest, CUU_ALU_OG, "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_PCO_I,   source+13); strcat(dest, " ");
+						strcatExe(dest, CUU_PCO_A,  "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_PCO_B,  "00000001"); strcat(dest, " ");
 						strcatExe(dest, CUU_PCO_S,  "00000001"); strcat(dest, " ");
 						//normally, no need to put it back to 00000000 (auto reset)
 						//but in this case, if condition is true, there will be no set
 						//so we have to reset it manually
-						strcatExe(dest, CUU_PCO_S,  "00000000"); strcat(dest, " ");
+						strcatExe(dest, CUU_PCO_S,  "00000000"); strcat(dest, " "); //CUU_PCO_S agent needs to be reset
 						strcatExe(dest, CUU_ALU_OG, "00000000"); strcat(dest, " "); //reset
+						strcatExe(dest, CUU_PCO_A,  "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_PCO_I,  "00000000"); strcat(dest, " ");
 						strcatExe(dest, CUU_PCO_B,  "00000000"); strcat(dest, "\n");
 					break;
@@ -1129,8 +1145,9 @@ void compileCommand(char* source, char* dest){
 			case 'v':
 				strcatExe(dest, CUU_PCO_I,   source+4 ); strcat(dest, " ");
 				strcatExe(dest, CUU_PCO_A,  "00000001"); strcat(dest, " ");
+				strcatExe(dest, CUU_PCO_A,  "00000001"); strcat(dest, " "); //this is the same operation as before, just to let the PCO_S prepare itself
 				strcatExe(dest, CUU_PCO_S,  "00000001"); strcat(dest, " ");
-				//no need to put it back to 00000000 (auto reset)
+				strcatExe(dest, CUU_PCO_S,  "00000000"); strcat(dest, " "); //CUU_PCO_S agent needs to be reset
 				strcatExe(dest, CUU_PCO_I,  "00000000"); strcat(dest, " "); //reset
 				strcatExe(dest, CUU_PCO_A,  "00000000"); strcat(dest, "\n");
 			break;

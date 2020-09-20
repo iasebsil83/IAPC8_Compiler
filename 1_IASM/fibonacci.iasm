@@ -33,7 +33,9 @@ PXL ax01    v
 
 # ---- FOR LOOP (10 times) ----
 #check condition
-EN_ ax03    v
+EN_ ax03  x0a
+ASG  x04    r #temporary variable
+INV ax04    v
 IF_    r d010 #this "IF_" statement is holding the next 10 code lines
 
     # ---- FOR LOOP BODY ----
@@ -54,8 +56,8 @@ IF_    r d010 #this "IF_" statement is holding the next 10 code lines
     AD1 ax03    v
     ASG  x03    r
 
-    JMP xf5  v #go back to the begining of the loop (-10 lines before so value is -11)
-               #value f5 in hexadecimal is 245 in natural binary and -11 in signed binary (8 bits)
+    JMP xf2     v #go back to the begining of the loop (-13 lines before so value is -14)
+                  #value f2 in hexadecimal is 242 in natural binary and -14 in signed binary (8 bits)
 
 
 
