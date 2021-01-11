@@ -51,7 +51,7 @@ Let's Code !                                                           By I.A.
 
     LICENCE :
 
-    Library : UART_basics
+    IAPC8_Compiler
     Copyright (C) 2020  Sebastien SILVANO
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
