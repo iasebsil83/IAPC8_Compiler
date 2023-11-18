@@ -13,7 +13,7 @@
 
 // ---------------- Declarations ----------------
 #define FILENAME_LENGTH 80
-#define INPUT_LENGTH FILENAME_LENGTH-12
+#define INPUT_LENGTH    FILENAME_LENGTH-12
 
 
 
@@ -47,7 +47,7 @@ int main(){
 	}while(rawCode == NULL);
 
 
-	
+
 	//compilation
 	compCode = compile(rawCode);
 	sprintf(dest1_fileName, "2_IAX/%s.iax", input);
